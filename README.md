@@ -1,2 +1,2 @@
-# LogDuke: Spec for sending logs from any node over HTTP
+# LogFlow: Spec for sending logs from any node over HTTP
 
