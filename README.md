@@ -5,23 +5,25 @@
 Current Version : **dev0.1**
 
 **LogP** design respects multinode architectures for data exchange, it considers three main component parts.
+These components use **GET** and **POST** for sending and recieving **LogP** data.
 
 * **Sender**
 * **Reciever**
 * **Database**
 
 ##1.Sender 
-Sender sends logs from application to **Reciever** end.LogP data format consists of the following parts
+Sender **POST** logs from application to **Reciever** node.
+LogP data format consists of the following parts : 
 
-**1.type**:  To identify type of logs, **VERBOSE**, **INFO**, **CRITICAL**, **DEBUG** 
+**1.type**:  a standard type string identify type of logs, **VERBOSE**, **INFO**, **CRITICAL**, **DEBUG** 
 
-**2.tag**:  To add checkpoint for reference 
+**2.tag**:  a string to add checkpoint for reference.
 
-**3.message**: data part where details are given
+**3.message**: a string data part where details are given.
 
-**4.timestamp**: time of log generation, a unix timestamp
+**4.timestamp**: a unix timestamp to track log generate time.
 
-**5.clientId**: a unique application node id of log generation
+**5.clientId**: a unique application client/sender id string  that genrated the log.
 
 **6.extra**: an optional part for adding extra related data
 
@@ -35,3 +37,7 @@ example data format :
 "clientId": "0093b52e-f7e9-40f9-b430-e45efd334197"
 }
 ```
+Sender log data also includes LogP version and content-type HTTP header.
+
+##2.Reciever
+Reciever component accepts only LogP data format.
