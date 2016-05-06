@@ -15,7 +15,7 @@ These components use **GET** and **POST** for sending and recieving **LogP** dat
 Sender **POST** logs from application to **Reciever** node.
 LogP data format consists of the following parts : 
 
-**1.type**:  a standard type string identify type of logs, **VERBOSE**, **INFO**, **CRITICAL**, **DEBUG** 
+**1.type**:  a standard type string identify type of logs, **VERBOSE**, **INFO**, **CRITICAL**, **DEBUG** ,**ERROR**
 
 **2.tag**:  a string to add checkpoint for reference.
 
