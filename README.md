@@ -41,11 +41,15 @@ Sender log data also includes LogP version and content-type HTTP header.
 
 ##2.Reciever
 Reciever component accepts LogP data send from clients/senders, and resolves the data.This part deals with storing LogP data using **LogBase**.Checking for LogP version and data validation is 
-done in reciever part.
-Reciever accepts only **POST** requests, and deals with LogBase transparently.
-Standard Http response codes:
-**HTTP 200** : Recieving and Log data request success
-**HTTP 400** : Bad request, donot have standard LogP data format
+done in reciever part.  
+
+Reciever accepts only **POST** requests, and deals with LogBase transparently.  
+
+Standard Http response codes:  
+
+**HTTP 200** : Recieving and Log data request success  
+
+**HTTP 400** : Bad request, donot have standard LogP data format  
 
 ##3.LogBase
 LogBase accepts **GET** requests, data from **Reciever** is stored/managed by **LogBase**.
