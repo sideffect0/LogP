@@ -33,7 +33,7 @@ example data format :
 "type" : "VERBOSE",  
 "tag" : "login",  
 "message" : "button clicked",  
-"timestamp" : "1462015096",
+"timestamp" : 1462015096,
 "clientId": "0093b52e-f7e9-40f9-b430-e45efd334197"
 }
 ```
