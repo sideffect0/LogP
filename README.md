@@ -27,6 +27,9 @@ LogP data format consists of the following parts :
 
 **6.extra**: an optional part for adding extra related data
 
+###ClientId Generation   
+`clientId` generation must be done on `remote node` other than `client node`.By generating `clientId`, we can minimise extra data sending over LogP, that is uniq to client.Consider an example of an android app, the OS version or build number is data part that is uniq to device, so instead of sending this data over LogP, send this data to generate a uniq `clientId`.
+
 example data format : 
 ```js
 {
